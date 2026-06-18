@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}View {% endblock %}
+
+{% block content %}
+<h1>View</h1>
+
+    <div class="viewbox">
+        {% if not question%}
+        <h2>No cards, Add some to edit</h2>
+        {%endif%}
+    {%for q in question%}
+        <h2 class="View_Q"><strong>Question:  </strong> {{q.question}}
+        <br><strong>Answer:  </strong> {{q.answers}}</h2><br>
+    {% endfor %}
+    </div>
+
+    <a href="/study" class="Register_Button">Study</a>
+    
+    <a href="/edit" class="Register_Button">Edit</a>
+{% endblock %}
