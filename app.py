@@ -3,6 +3,7 @@ from sqlalchemy import *
 app = Flask(__name__)
 import random
 import time
+import os
 
 app.static_folder = 'static'
 app.config["SESSION_PERMANENT"] = False #sets up user and makes them not logged in forever
@@ -284,4 +285,5 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
