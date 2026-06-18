@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Add {% endblock %}
+
+{% block content %}
+<h1>Add Questions</h1> 
+<div class="Messages">
+<!-- taken from Assessment Task 1 -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</div>
+
+<div class="User">
+<form action="/add" method = "POST">
+    <label for="Topics">Select a Topic: </label><br>
+    <select name="Topic" id="topic">
+    <option value="Programming_Fundamentals">ProgrammingFundamentals</option>
+    <option value="SSA">SSA</option>
+    <option value="OOP">OOP</option>
+    <option value="Mechatronics">Mechatronics</option>
+    <option value="Automation">Automation</option>
+    </select><br>
+    <input type="text" id="Question" name="Question" placeholder="Question"><br>
+    <input type="text" id="Correct" name="Correct" placeholder="Correct"><br>
+    <input type="text" id="Incorrect1" name="Incorrect1" placeholder="Incorrect 1"><br>
+    <input type="text" id="Incorrect2" name="Incorrect2" placeholder="Incorrect 2"><br>
+    <input type="text" id="Incorrect3" name="Incorrect3" placeholder="Incorrect 3"><br>
+    <input type="submit" class="Register_Button"><br>
+</div>
+{% endblock %}

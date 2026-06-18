@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock %} </title>
+    <link rel="stylesheet" href=/static/style.css>
+</head>
+<body>
+<!-- Modified navbar code from AT1 -->
+<nav> 
+    <ul class="horizontal-list">
+        <li><a href="/">Home</a></li>        
+        <li><a href="/view">View</a></li>
+        <li><a href="/add">Add</a></li>
+        <li><a href="/edit">Edit</a></li>
+        <li><a href="/study">Study</a></li>
+        {% if session.get('user') %}
+    <li><a href="/logout"> {{ session['user'] }} (Logout)</a></li>
+{% else %}
+    <li><a href="/login">Login</a></li>
+{% endif %}
+    </ul>
+</nav>
+{% block content %}{% endblock %}
+</body> 

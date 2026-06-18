@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Register {% endblock %}
+
+{% block content %}
+
+<!-- Taken from Assessment Task 1 -->
+<div class="Message">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</div>
+<h1>Register</h1>
+<div class=User>
+    <form action = "/register" method = "POST">
+    <input type="text" id "Username" name="Username" placeholder="Username:" required><br>
+    <input type="password" id="Pass" name="Password" placeholder="Enter your password:" required><br>
+    <input type="password" id="Pass2" name="Pass2" placeholder="Re-Enter your password:" required><br>
+    <input type="submit" class = "Register_Button"><br>
+    </form>
+</div>
+<a href="/login" class="Register_Button"> Login Page</a>
+{% endblock %}

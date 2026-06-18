@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz {% endblock %}
+
+{% block content %}
+<h1>Quiz</h1>
+
+<form action="/submit_quiz" method="POST">
+<input type="hidden" name="Topic" value="{{ topic }}">
+{% for item in questions %}
+    {% set question_num = loop.index0 %} 
+    <div class="Question_Block">
+        <h3 class="page_text">{{ loop.index }}. {{ item.question }}</h3>
+        <div class="Answer_Container">
+        {% for answer in item.answers %}
+        <div class="Answer_Option">
+            <input type="radio" 
+                   id="q{{ question_num }}_a{{ loop.index0 }}" 
+                   name="{{item.question}}" 
+                   value="{{ answer }}" required>
+            <label for="q{{ question_num }}_a{{ loop.index0 }}">{{ answer }}</label>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+  <input type="submit" class="Register_Button"><br>
+  </form>
+{% endblock %}

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+*{
+    font-family: 'Rowdies' ;
+}
+h2{
+    color: grey;
+}
+
+.info{
+    color:white;
+    
+
+}
+
+
+.question_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Answer_Option{
+    margin: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-radius: 48px;
+    background-color: grey;
+    border-color: #BCECE0;
+    width: 100%;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #BCECE0;
+}
+
+.Answer_Option label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.Message{
+    color: white;
+}
+
+
+.delete_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color:#BCECE0;
+    color: grey;
+    height: 55px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    outline: 3px solid grey;
+}
+
+.delete_button:hover{
+    background-color: grey;
+    color: #BCECE0;
+    transition: 0.3s;
+}
+
+
+input[type="radio"] {
+    width: auto; 
+    height: auto;
+    margin-right: 10px;
+    display: none;
+}
+
+.Answer_Option:has(input[type="radio"]:checked){
+    background-color: #BCECE0;
+    color: grey;
+}
+
+.Answer_Option:has(input[type="radio"]:checked) label{
+    color: grey;
+}
+
+
+.viewbox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #BCECE0;
+    color: grey;
+    margin-inline: 30%;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.View_Q{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input{
+    display: flex;
+    justify-content: center;
+    color: grey;
+    background-color: #BCECE0;
+    width: 700px;
+    height:25px;
+    font-size: 20px;
+    outline:none;
+    border:none;
+    text-align: center;
+    border-radius: 20px;
+}
+::placeholder{
+    color: grey;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: white;
+}
+
+select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color:#BCECE0;
+    color: grey;
+    height: 25px;
+    width: auto+5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+option{
+    color: grey;
+}
+
+
+.Register_Button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color:#BCECE0;
+    color: gray;
+    height: 55px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    outline: 3px solid grey;
+}
+
+.Register_Button:hover{
+    background-color: gray;
+    color: #BCECE0;
+    transition: 0.3s;
+}
+
+body {
+    background: linear-gradient(grey 30%,#BCECE0 70%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.page_text{
+    color: white;
+}
+
+
+h3{
+    display: flex;
+    justify-content: center;
+    color: grey;}
+
+text {
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-list{
+    list-style-type: none;
+    margin:0;
+    padding:25px;
+    display:flex;
+    justify-content: center;
+    gap:20px
+}
+
+
+.flashes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.horizontal-list li a {
+    display: block;
+    background-color: #BCECE0;
+    color:grey;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.horizontal-list li a:hover {
+    background-color: grey;
+    color: #BCECE0;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+}
+
+content_div{
+    border: 25px gray;
+
+}
+div {
+    display: flex;
+    justify-content: center;
+}
